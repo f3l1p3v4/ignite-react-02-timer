@@ -7,9 +7,18 @@ export const HistoryContainer = styled.main`
   display: flex;
   flex-direction: column;
 
+  @media (max-width: 768px) {
+    padding: 0;
+  }
+
   h1 {
     font-size: 1.5rem;
     color: ${(props) => props.theme['gray-100']};
+
+    @media (max-width: 768px) {
+      margin-top: 1.6rem;
+      font-size: 1rem;
+    }
   }
 `
 
@@ -23,6 +32,10 @@ export const HistoryList = styled.div`
     border-collapse: collapse;
     min-width: 600px;
 
+    @media (max-width: 768px) {
+      min-width: auto;
+    }
+
     th {
       background-color: ${(props) => props.theme['gray-600']};
       padding: 1rem;
@@ -31,9 +44,19 @@ export const HistoryList = styled.div`
       font-size: 0.875rem;
       line-height: 1.6;
 
+      @media (max-width: 768px) {
+        padding: 0.4rem;
+        font-size: 0.6rem;
+      }
+
       &:first-child {
         border-top-left-radius: 8px;
         padding-left: 1.5rem;
+
+
+        @media (max-width: 768px) {
+          padding-left: 0.6rem;
+        }
       }
 
       &:last-child {
@@ -49,13 +72,27 @@ export const HistoryList = styled.div`
       font-size: 0.875rem;
       line-height: 1.6;
 
+      @media (max-width: 768px) {
+        padding: 0.4rem;
+        font-size: 0.6rem;
+      }
+
       &:first-child {
         width: 50%;
         padding-left: 1.5rem;
+
+        @media (max-width: 768px) {
+          padding-left: 0.6rem;
+          width: auto;
+        } 
       }
 
       &:last-child {
         padding-right: 1.5rem;
+
+        @media (max-width: 768px) {
+          padding-right: 0.6rem;
+        } 
       }
     }
   }

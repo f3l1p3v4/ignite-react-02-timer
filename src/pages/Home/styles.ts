@@ -14,6 +14,16 @@ export const HomeContainer = styled.main`
     align-items: center;
     gap: 3.5rem;
   }
+
+  @media (max-width: 768px) {
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      /* padding: 20px; */
+    }
+  }
 `
 
 export const BaseCountdownButton = styled.button`
@@ -35,6 +45,10 @@ export const BaseCountdownButton = styled.button`
   &:disabled {
     opacity: 0.7;
     cursor: not-allowed;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.8rem;
   }
 `
 
