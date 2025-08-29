@@ -21,15 +21,36 @@ function playBeep(frequency: number, duration: number, volume: number = 0.5) {
 
 // ADICIONE ESTA FUNÇÃO AQUI (logo após a playBeep)
 function playPomodoroBeeps(secondsRemaining: number) {
-  if (secondsRemaining === 3) {
+  if (secondsRemaining === 10) {
     // Primeiro beep (tum)
     playBeep(440, 0.2, 0.3)
-  } else if (secondsRemaining === 2) {
+  } else if (secondsRemaining === 9) {
     // Segundo beep (tum)
     playBeep(440, 0.2, 0.3)
+  } else if (secondsRemaining === 8) {
+    // Segundo beep (tum)
+    playBeep(440, 0.2, 0.3)
+  } else if (secondsRemaining === 7) {
+    // Segundo beep (tum)
+    playBeep(440, 0.2, 0.3)
+  } else if (secondsRemaining === 6) {
+    // Segundo beep (tum)
+    playBeep(440, 0.2, 0.3)
+  } else if (secondsRemaining === 5) {
+    // Segundo beep (tum)
+    playBeep(440, 0.2, 0.3)
+  } else if (secondsRemaining === 4) {
+    // Segundo beep (tum)
+    playBeep(440, 0.2, 0.3)
+  } else if (secondsRemaining === 3) {
+    // Segundo beep (tum)
+    playBeep(440, 0.2, 0.3)
+  } else if (secondsRemaining === 2) {
+  // Segundo beep (tum)
+  playBeep(440, 0.2, 0.3)
   } else if (secondsRemaining === 1) {
     // Beep final mais longo (tummmm)
-    playBeep(330, 0.5, 0.4)
+    playBeep(880, 0.5, 0.5)
   }
 }
 
@@ -69,7 +90,7 @@ export function Countdown() {
           const secondsRemaining = totalSeconds - secondsDifference
           
           // SUBSTITUA ESTE BLOCO IF:
-          if (secondsRemaining <= 3 && secondsRemaining > 0 && !hasPlayedFinalSound.current) {
+          if (secondsRemaining <= 10 && secondsRemaining > 0 && !hasPlayedFinalSound.current) {
             playPomodoroBeeps(secondsRemaining)
             
             // Marcar que o som final foi tocado no último segundo
